@@ -103,11 +103,32 @@
             <div class="content">
                 <h2>Laravel-Javascript</h2>
                 <tr>
-                numero 1: <input type="" id."numero1">
-                
-                
+                Número 1: <input type="text" id="numero1"> &nbsp; &nbsp;
+                Número 2: <input type="text" id="numero2"> <br>
+                <input type="submit" value="Suma-1" onclick="suma();" id="sub"> &nbsp; &nbsp;
+                <button onclick="suma();">Sumar-2</button>
+                <br><br>
 
+                <center>
+                     <div id="resdata">RESULTADO-1</div><br>
+                     <div class="ejemplo">RESULTADO-2 a</div><br>
+                     <div class="ejemplo">RESULTADO-2 b</div><br>
+                     <textarea name="txt" rows="5" cols="50">RESULTADO-3</testarea>
+                     <p id="fecha">-- -- -- -- --</p>
+                     </center>
+
+                     <!-- ------------------------------------ -->
+                     <h2 id="colores">Colores</h2>
+                        <button onclick="document.getElementById('color').style.color = 'red'">Rojo</button>
+                        <button onclick="document.getElementById('colores').style.border ='solid 1px #00FF00'">Verde</button>
+                        <button onclick="document.getElementById('colores').style.cssText ='color: #0000FF; border: solid 1px #0000FF'">Azul</button>
+                        
+                        <select id="comidas">
+                        <option>Mango</option>
+                        <option>Enchiladas</option>
+                    </select>
                 
+                </div>
                 <div class="links">
                     <a href="{{ route('inicio') }}">Regresar</a>
                     
@@ -115,4 +136,13 @@
             </div>
         </div>
     </body>
+        <script>
+            document.getElementById("fecha").innerHTML = fecha1;
+            var elemento= document.createElement("option");
+            var selector = document.getElementById("comidas");
+            var objeto = document.getElementsByTagName("option")[0];
+            selector.insertBefore(elemento,objeto)
+            elemento.setAttribute('value','sopa');
+            elemento.textContent = 'SOPA'
+            </script>
 </html>
